@@ -208,10 +208,46 @@ biu biu biu.
 {{%/* music "28196554" */%}}
 ```
 
-{{%/* music "28196554" */%}}
+{{% music "28196554" %}}
 
 <style>
 .post-content img {
   height: 64px;
 }
 </style>
+# Bilibili video
+
+## Params
+
++ `av`
+  + id of the bilibili video
+  + you can extract from bilibili video url
+  + url format https://www.bilibili.com/video/av65010879
++ `page`
+  + which page to display
+  + option param
+  + default value 1
+
+## Example
+
++ Simple
+
+```markdown
+{{%/* bilibili 65010879 */%}}
+{{%/* bilibili 65010879 1 */%}}
+```
+
++ Named Params
+
+```markdown
+{{%/* bilibili av="65010879" */%}}
+{{%/* bilibili av="65010879" page="1" */%}}
+```
+
++ Example
+
+```markdown
+{{%/* bilibili 65010879 */%}}
+```
+
+{{% bilibili 65010879 %}}

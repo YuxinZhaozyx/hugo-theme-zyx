@@ -1,0 +1,9 @@
+{{ if .IsNamedParams }}
+<div class="bilibili-container">
+<iframe src="//player.bilibili.com/player.html?aid={{ .Get "av" }}&page={{ if .Get "page" }}{{.Get "page"}}{{ else }}1{{end}}" stype="height:100%;"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+{{ else }}
+<div class="bilibili-container">
+<iframe src="//player.bilibili.com/player.html?aid={{ .Get 0 }}&page={{ if len .Params | eq 2 }}{{.Get 1}}{{ else }}1{{end}}" stype="height:100%;"  scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+</div>
+{{ end }}
